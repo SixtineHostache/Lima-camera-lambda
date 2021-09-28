@@ -59,18 +59,7 @@
 					<libs>
 						<lib>
 							<!-- liblambda -->
-							<name>lambda</name>
-							<type>shared</type>
-							<directory>sdk/bin/</directory>
-						</lib>
-						<lib>
-							<!-- libfsdetcore -->
-							<name>fsdetcore</name>
-							<type>shared</type>
-							<directory>sdk/bin/</directory>
-						</lib>
-						<lib>
-							<name>boost_thread</name>
+							<name>xsp</name>
 							<type>shared</type>
 							<directory>sdk/bin/</directory>
 						</lib>
