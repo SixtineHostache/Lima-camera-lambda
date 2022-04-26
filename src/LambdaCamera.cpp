@@ -592,3 +592,17 @@ string Camera::getLibVersion(std::string &libVersion)
 	libVersion = ss.str();
 	return libVersion;
 }
+
+//---------------------------------------------------------------------------------------
+//! Camera::hasFeatures()
+//! returns true or false if the feature is present or not in the camera model
+//---------------------------------------------------------------------------------------
+bool Camera::hasFeature(xsp::lambda::Feature feature)
+{
+	std::cout << "has Feature entering "<< std::endl;
+	DEB_MEMBER_FUNCT();
+	auto module_nr = 1;
+	auto w_has_feature = detector->hasFeature(module_nr, feature);
+	DEB_RETURN() << DEB_VAR1(w_has_feature);
+	return w_has_feature;
+}
