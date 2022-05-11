@@ -584,13 +584,10 @@ void Camera::getDistortionCorrection(bool &is_on){
 //! Camera::getLibVersion()
 //! Library version
 //---------------------------------------------------------------------------------------
-string Camera::getLibVersion(std::string &libVersion)
+void Camera::getLibVersion(std::string &libVersion)
 {
 	DEB_MEMBER_FUNCT();
-	stringstream ss;
-	ss << xsp::libraryVersion();
-	libVersion = ss.str();
-	return libVersion;
+	libVersion = xsp::libraryVersion();
 }
 
 //---------------------------------------------------------------------------------------
@@ -599,7 +596,6 @@ string Camera::getLibVersion(std::string &libVersion)
 //---------------------------------------------------------------------------------------
 bool Camera::hasFeature(xsp::lambda::Feature feature)
 {
-	std::cout << "has Feature entering "<< std::endl;
 	DEB_MEMBER_FUNCT();
 	auto module_nr = 1;
 	auto w_has_feature = detector->hasFeature(module_nr, feature);
